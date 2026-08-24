@@ -1,0 +1,1633 @@
+{
+  "_meta": {
+    "version": "5.2.1",
+    "exportedAt": "2026-06-05T08:51:05.387Z",
+    "app": "Kangaroo Control de Bolsa"
+  },
+  "products": [
+    {
+      "id": "mpoln34wk7i",
+      "name": "REGULADORES GRANDE (EXIVIDOR PUERTA)",
+      "qty": 11,
+      "price": 165,
+      "sellPrice": 260,
+      "debtAmount": null,
+      "debtDate": null,
+      "providerIds": [
+        "mpolaxlke7v"
+      ],
+      "providerPrices": {
+        "mpolaxlke7v": 165
+      },
+      "date": "27/5/2026"
+    },
+    {
+      "id": "mpoogdefq5g",
+      "name": "TUVO PVC DE 2 DRENAJE YARY 831",
+      "qty": 6,
+      "price": 243,
+      "sellPrice": 360,
+      "debtAmount": null,
+      "debtDate": null,
+      "providerIds": [
+        "mpolaxlke7v"
+      ],
+      "providerPrices": {
+        "mpolaxlke7v": 243
+      },
+      "date": "28/5/2026"
+    },
+    {
+      "id": "mpoopajk79g",
+      "name": "TUVOS DE MED SCH40 PRRESION",
+      "qty": 25,
+      "price": 135,
+      "sellPrice": 210,
+      "debtAmount": 12845,
+      "debtDate": "2026-06-27",
+      "providerIds": [
+        "mpolaxlke7v"
+      ],
+      "providerPrices": {
+        "mpolaxlke7v": 135
+      },
+      "date": "28/5/2026"
+    },
+    {
+      "id": "mpoouz7n128",
+      "name": "CLAVO CORRIENTE DE 3",
+      "qty": 40,
+      "price": 56,
+      "sellPrice": 75,
+      "debtAmount": null,
+      "debtDate": null,
+      "providerIds": [
+        "mpolaxlke7v"
+      ],
+      "providerPrices": {
+        "mpolaxlke7v": 135
+      },
+      "date": "28/5/2026"
+    },
+    {
+      "id": "mpq2km7tuy9",
+      "name": "TUBOS PVC DE 3",
+      "qty": 6,
+      "price": 360,
+      "sellPrice": 700,
+      "debtAmount": 13451,
+      "debtDate": "2026-06-28",
+      "providerIds": [
+        "mpoldu671xc"
+      ],
+      "providerPrices": {},
+      "date": "28/5/2026"
+    },
+    {
+      "id": "mpq2x9pjquf",
+      "name": "BASE TV 32A55 DS MOVIBLE X 400",
+      "qty": 1,
+      "price": 550,
+      "sellPrice": 860,
+      "debtAmount": null,
+      "debtDate": null,
+      "providerIds": [
+        "mpoldu671xc"
+      ],
+      "providerPrices": {
+        "mpoldu671xc": 550
+      },
+      "date": "28/5/2026"
+    },
+    {
+      "id": "mpq335jclg0",
+      "name": "BASE TV 14A42 DS27 MOVIBLE",
+      "qty": 2,
+      "price": 450,
+      "sellPrice": 690,
+      "debtAmount": null,
+      "debtDate": null,
+      "providerIds": [
+        "mpoldu671xc"
+      ],
+      "providerPrices": {},
+      "date": "28/5/2026"
+    },
+    {
+      "id": "mpq39s58pm9",
+      "name": "CUCHILLA LICUADORA BELLMARK ORIGINAL",
+      "qty": 3,
+      "price": 180,
+      "sellPrice": 260,
+      "debtAmount": null,
+      "debtDate": null,
+      "providerIds": [
+        "mpoldu671xc"
+      ],
+      "providerPrices": {
+        "mpoldu671xc": 180
+      },
+      "date": "28/5/2026"
+    },
+    {
+      "id": "mpq3bvqyzru",
+      "name": "COLA AMARILLA UNIVERSAL DEPOSITO",
+      "qty": 10,
+      "price": 95,
+      "sellPrice": 135,
+      "debtAmount": null,
+      "debtDate": null,
+      "providerIds": [
+        "mpoldu671xc"
+      ],
+      "providerPrices": {
+        "mpoldu671xc": 95
+      },
+      "date": "28/5/2026"
+    },
+    {
+      "id": "mpq3h1wsqal",
+      "name": "MOTA ANTIGOTA ZETA DE 1/2 X 9",
+      "qty": 23,
+      "price": 47.5,
+      "sellPrice": 110,
+      "debtAmount": null,
+      "debtDate": null,
+      "providerIds": [
+        "mpoldu671xc"
+      ],
+      "providerPrices": {
+        "mpoldu671xc": 47.5
+      },
+      "date": "28/5/2026"
+    },
+    {
+      "id": "mpq3mtn7gcg",
+      "name": "CEMENTO PVC AZUL  LANCO 1 ONZA",
+      "qty": 27,
+      "price": 69,
+      "sellPrice": 110,
+      "debtAmount": null,
+      "debtDate": null,
+      "providerIds": [
+        "mpoldu671xc"
+      ],
+      "providerPrices": {
+        "mpoldu671xc": 69
+      },
+      "date": "28/5/2026"
+    },
+    {
+      "id": "mpq3pmz4c63",
+      "name": "TAPE 3M PEQUEN",
+      "qty": 10,
+      "price": 85,
+      "sellPrice": 120,
+      "debtAmount": null,
+      "debtDate": null,
+      "providerIds": [
+        "mpoldu671xc"
+      ],
+      "providerPrices": {
+        "mpoldu671xc": 85
+      },
+      "date": "28/5/2026"
+    },
+    {
+      "id": "mpq4ako7v8g",
+      "name": "PORTA CANDADO #",
+      "qty": 12,
+      "price": 40,
+      "sellPrice": 70,
+      "debtAmount": 1000,
+      "debtDate": "2026-06-15",
+      "providerIds": [
+        "mpq4a7oykjo"
+      ],
+      "providerPrices": {
+        "mpq4a7oykjo": 40
+      },
+      "date": "28/5/2026"
+    },
+    {
+      "id": "mpq4gy6ohot",
+      "name": "TAPA BLANCA TOMACORRIENTE",
+      "qty": 30,
+      "price": 12,
+      "sellPrice": 20,
+      "debtAmount": null,
+      "debtDate": null,
+      "providerIds": [
+        "mpq4a7oykjo"
+      ],
+      "providerPrices": {
+        "mpq4a7oykjo": 12
+      },
+      "date": "28/5/2026"
+    },
+    {
+      "id": "mpq4jqkgt7g",
+      "name": "TOMA CORRIENTE INLEC BLISTER   SIN LA TAPA",
+      "qty": 12,
+      "price": 25,
+      "sellPrice": 90,
+      "debtAmount": null,
+      "debtDate": null,
+      "providerIds": [
+        "mpq4a7oykjo"
+      ],
+      "providerPrices": {
+        "mpq4a7oykjo": 25
+      },
+      "date": "28/5/2026"
+    },
+    {
+      "id": "mpq4rvzu3zq",
+      "name": "CERRADURA DE PUNO BENO CON LLAVE",
+      "qty": 3,
+      "price": 270,
+      "sellPrice": 385,
+      "debtAmount": null,
+      "debtDate": null,
+      "providerIds": [
+        "mpq4a7oykjo"
+      ],
+      "providerPrices": {
+        "mpq4a7oykjo": 270
+      },
+      "date": "28/5/2026"
+    },
+    {
+      "id": "mpq4vl4skb6",
+      "name": "CERRADURA DE PUNO BENO SIN LLAVES",
+      "qty": 2,
+      "price": 260,
+      "sellPrice": 365,
+      "debtAmount": null,
+      "debtDate": null,
+      "providerIds": [],
+      "providerPrices": {},
+      "date": "28/5/2026"
+    },
+    {
+      "id": "mprp0m1nhpm",
+      "name": "CUCHILLAS P LICUADORA  OSTER",
+      "qty": 2,
+      "price": 180,
+      "sellPrice": 260,
+      "debtAmount": null,
+      "debtDate": null,
+      "providerIds": [
+        "mpoldu671xc"
+      ],
+      "providerPrices": {
+        "mpoldu671xc": 180
+      },
+      "date": "29/5/2026"
+    },
+    {
+      "id": "mprpcdlejpc",
+      "name": "CANALETA RESTANGULAR PARED KOLNY 80 PUL X 1/2",
+      "qty": 6,
+      "price": 120,
+      "sellPrice": 170,
+      "debtAmount": null,
+      "debtDate": null,
+      "providerIds": [
+        "mpoldu671xc"
+      ],
+      "providerPrices": {
+        "mpoldu671xc": 120
+      },
+      "date": "29/5/2026"
+    },
+    {
+      "id": "mprpi1ktp0v",
+      "name": "CARTON PIEDRA HIDROFOGO 1/8 4X8",
+      "qty": 0,
+      "price": 510,
+      "sellPrice": 700,
+      "debtAmount": null,
+      "debtDate": null,
+      "providerIds": [
+        "mpolaxlke7v"
+      ],
+      "providerPrices": {
+        "mpolaxlke7v": 510
+      },
+      "date": "29/5/2026"
+    },
+    {
+      "id": "mpstcgqpn4u",
+      "name": "TOMA CORRIENTE BTICINO",
+      "qty": 10,
+      "price": 160,
+      "sellPrice": 235,
+      "debtAmount": null,
+      "debtDate": null,
+      "providerIds": [
+        "mpolaxlke7v"
+      ],
+      "providerPrices": {
+        "mpolaxlke7v": 0
+      },
+      "date": "30/5/2026"
+    },
+    {
+      "id": "mpstk7it9ei",
+      "name": "TOMA CORRIENTE MERCORY",
+      "qty": 13,
+      "price": 75,
+      "sellPrice": 140,
+      "debtAmount": null,
+      "debtDate": null,
+      "providerIds": [
+        "mpolaxlke7v"
+      ],
+      "providerPrices": {
+        "mpolaxlke7v": 75
+      },
+      "date": "30/5/2026"
+    },
+    {
+      "id": "mpstq8z72u4",
+      "name": "TOMA CORRIENTE 2BLE SOBREPONER VOLTECK CODE 47350",
+      "qty": 11,
+      "price": 77,
+      "sellPrice": 120,
+      "debtAmount": null,
+      "debtDate": null,
+      "providerIds": [
+        "mpq5368m936"
+      ],
+      "providerPrices": {
+        "mpq5368m936": 77
+      },
+      "date": "30/5/2026"
+    },
+    {
+      "id": "mpstv4g8jgt",
+      "name": "TOMA CORRIENTE 3PLE SOBREPONER VOLTECK CODE 47351",
+      "qty": 11,
+      "price": 58,
+      "sellPrice": 130,
+      "debtAmount": null,
+      "debtDate": null,
+      "providerIds": [
+        "mpq5368m936"
+      ],
+      "providerPrices": {
+        "mpq5368m936": 77
+      },
+      "date": "30/5/2026"
+    },
+    {
+      "id": "mpsu1qropno",
+      "name": "TOMA CORRIENTE INLEC BLISTER   SIN LA TAPA",
+      "qty": 11,
+      "price": 60,
+      "sellPrice": 110,
+      "debtAmount": null,
+      "debtDate": null,
+      "providerIds": [
+        "mpq57hh2sg7"
+      ],
+      "providerPrices": {
+        "mpq57hh2sg7": 60
+      },
+      "date": "30/5/2026"
+    },
+    {
+      "id": "mptbn4n0rsz",
+      "name": "INTERRUCTORES CENCILLOS AKSI",
+      "qty": 3,
+      "price": 25,
+      "sellPrice": 95,
+      "debtAmount": null,
+      "debtDate": null,
+      "providerIds": [
+        "mpolaxlke7v"
+      ],
+      "providerPrices": {
+        "mpolaxlke7v": 25
+      },
+      "date": "30/5/2026"
+    },
+    {
+      "id": "mptbp52i2y2",
+      "name": "INTERRUCTORES CENCILLOS YARY",
+      "qty": 1,
+      "price": 20,
+      "sellPrice": 95,
+      "debtAmount": null,
+      "debtDate": null,
+      "providerIds": [
+        "mpolaxlke7v"
+      ],
+      "providerPrices": {
+        "mpolaxlke7v": 20
+      },
+      "date": "30/5/2026"
+    },
+    {
+      "id": "mptcbpkpr8b",
+      "name": "INTERRUCTORES CENCILLOS ELEGANTES BLANCOS",
+      "qty": 4,
+      "price": 89,
+      "sellPrice": 135,
+      "debtAmount": null,
+      "debtDate": null,
+      "providerIds": [
+        "mptc2mlv6tr"
+      ],
+      "providerPrices": {
+        "mptc2mlv6tr": 89
+      },
+      "date": "30/5/2026"
+    },
+    {
+      "id": "mptcdzi434u",
+      "name": "INTERRUCTORES CENCILLOS ELEGANTES GRIS",
+      "qty": 4,
+      "price": 89,
+      "sellPrice": 155,
+      "debtAmount": null,
+      "debtDate": null,
+      "providerIds": [
+        "mptc2mlv6tr"
+      ],
+      "providerPrices": {
+        "mptc2mlv6tr": 89
+      },
+      "date": "30/5/2026"
+    },
+    {
+      "id": "mptfgfg8tsl",
+      "name": "INTERRUCTORES CENCILLOS DE OFERTA",
+      "qty": 1,
+      "price": 20,
+      "sellPrice": 60,
+      "debtAmount": null,
+      "debtDate": null,
+      "providerIds": [],
+      "providerPrices": {},
+      "date": "31/5/2026"
+    },
+    {
+      "id": "mptfj7ifj55",
+      "name": "INTERRUCTOR 2BLE OFERTA",
+      "qty": 2,
+      "price": 45,
+      "sellPrice": 80,
+      "debtAmount": null,
+      "debtDate": null,
+      "providerIds": [],
+      "providerPrices": {},
+      "date": "31/5/2026"
+    },
+    {
+      "id": "mptfl6bp0gk",
+      "name": "TOMA CORIENTE OFERTA",
+      "qty": 3,
+      "price": 45,
+      "sellPrice": 70,
+      "debtAmount": null,
+      "debtDate": null,
+      "providerIds": [],
+      "providerPrices": {},
+      "date": "31/5/2026"
+    },
+    {
+      "id": "mptfucwlxs4",
+      "name": "TOMA CORRIENTE  GRIS PESADO 2BLE GRIS INLEC",
+      "qty": 11,
+      "price": 0,
+      "sellPrice": 240,
+      "debtAmount": null,
+      "debtDate": null,
+      "providerIds": [],
+      "providerPrices": {},
+      "date": "31/5/2026"
+    },
+    {
+      "id": "mptfx94cavd",
+      "name": "TOMA CORRIENTE  GRIS PESADO 3PLE GRIS INLEC",
+      "qty": 10,
+      "price": 0,
+      "sellPrice": 225,
+      "debtAmount": null,
+      "debtDate": null,
+      "providerIds": [],
+      "providerPrices": {},
+      "date": "31/5/2026"
+    },
+    {
+      "id": "mptgdfuso36",
+      "name": "TOMA CORRIENTE 3PLE BLANCO INLEC",
+      "qty": 10,
+      "price": 0,
+      "sellPrice": 190,
+      "debtAmount": null,
+      "debtDate": null,
+      "providerIds": [
+        "mpq55d5z6b5"
+      ],
+      "providerPrices": {
+        "mpq55d5z6b5": 0
+      },
+      "date": "31/5/2026"
+    },
+    {
+      "id": "mptgiragef1",
+      "name": "INTERRUCTOR P TIMBRE YARY",
+      "qty": 6,
+      "price": 0,
+      "sellPrice": 120,
+      "debtAmount": null,
+      "debtDate": null,
+      "providerIds": [
+        "mpolaxlke7v"
+      ],
+      "providerPrices": {
+        "mpolaxlke7v": 0
+      },
+      "date": "31/5/2026"
+    },
+    {
+      "id": "mptgt1ztent",
+      "name": "TICTOMA INLEC BLANCO",
+      "qty": 9,
+      "price": 0,
+      "sellPrice": 145,
+      "debtAmount": null,
+      "debtDate": null,
+      "providerIds": [],
+      "providerPrices": {},
+      "date": "31/5/2026"
+    },
+    {
+      "id": "mptgzwgrhec",
+      "name": "TICTOMA  YARY  BLANCO",
+      "qty": 5,
+      "price": 0,
+      "sellPrice": 125,
+      "debtAmount": null,
+      "debtDate": null,
+      "providerIds": [
+        "mpolaxlke7v"
+      ],
+      "providerPrices": {
+        "mpolaxlke7v": 0
+      },
+      "date": "31/5/2026"
+    },
+    {
+      "id": "mpth2sb2nuk",
+      "name": "TICTOMA GRIS SWICH SOCKET",
+      "qty": 2,
+      "price": 0,
+      "sellPrice": 180,
+      "debtAmount": null,
+      "debtDate": null,
+      "providerIds": [],
+      "providerPrices": {},
+      "date": "31/5/2026"
+    },
+    {
+      "id": "mpthex5huf1",
+      "name": "INTERRUCTOR 2BLE INLEC BLANCO",
+      "qty": 5,
+      "price": 60,
+      "sellPrice": 120,
+      "debtAmount": null,
+      "debtDate": null,
+      "providerIds": [],
+      "providerPrices": {},
+      "date": "31/5/2026"
+    },
+    {
+      "id": "mpthgx0ff6u",
+      "name": "INTERRUCTOR 3PLE INLEC BLANCO",
+      "qty": 4,
+      "price": 0,
+      "sellPrice": 145,
+      "debtAmount": null,
+      "debtDate": null,
+      "providerIds": [],
+      "providerPrices": {},
+      "date": "31/5/2026"
+    },
+    {
+      "id": "mpthmsipruf",
+      "name": "INTERRUCTORES CENCILLOS DE OFERTA BOTON MEDIANO",
+      "qty": 5,
+      "price": 0,
+      "sellPrice": 60,
+      "debtAmount": null,
+      "debtDate": null,
+      "providerIds": [],
+      "providerPrices": {},
+      "date": "31/5/2026"
+    },
+    {
+      "id": "mpthojay4ri",
+      "name": "INTERRUCTORES 2BLE DE OFERTA BOTON MEDIANO",
+      "qty": 1,
+      "price": 0,
+      "sellPrice": 65,
+      "debtAmount": null,
+      "debtDate": null,
+      "providerIds": [],
+      "providerPrices": {},
+      "date": "31/5/2026"
+    },
+    {
+      "id": "mpthshouwbh",
+      "name": "INTERRUCTORES 3PLE DE OFERTA",
+      "qty": 6,
+      "price": 0,
+      "sellPrice": 70,
+      "debtAmount": null,
+      "debtDate": null,
+      "providerIds": [],
+      "providerPrices": {},
+      "date": "31/5/2026"
+    },
+    {
+      "id": "mpti5qply1j",
+      "name": "TOMA CORRIENTE BLANCO LEVINTO Y  LA TAPA  MEDIO",
+      "qty": 27,
+      "price": 0,
+      "sellPrice": 120,
+      "debtAmount": null,
+      "debtDate": null,
+      "providerIds": [],
+      "providerPrices": {},
+      "date": "31/5/2026"
+    },
+    {
+      "id": "mpti9thomwl",
+      "name": "ACEITE 3 EN 1 TRUPER 16711",
+      "qty": 6,
+      "price": 0,
+      "sellPrice": 90,
+      "debtAmount": null,
+      "debtDate": null,
+      "providerIds": [
+        "mpq5368m936"
+      ],
+      "providerPrices": {
+        "mpq5368m936": 0
+      },
+      "date": "31/5/2026"
+    },
+    {
+      "id": "mpzryuaz4is",
+      "name": "INTERRUCTORES ROOM ELECTRIC",
+      "qty": 7,
+      "price": 40,
+      "sellPrice": 120,
+      "debtAmount": null,
+      "debtDate": null,
+      "providerIds": [],
+      "providerPrices": {},
+      "date": "4/6/2026"
+    },
+    {
+      "id": "mq0myjneh3w",
+      "name": "MANIJAS HALON PARA PUERTA EVEDOR",
+      "qty": 12,
+      "price": 0,
+      "sellPrice": 130,
+      "debtAmount": null,
+      "debtDate": null,
+      "providerIds": [],
+      "providerPrices": {},
+      "date": "5/6/2026"
+    },
+    {
+      "id": "mq0n5w49cmb",
+      "name": "MANIJAS HALON ECONOMICO #4",
+      "qty": 7,
+      "price": 0,
+      "sellPrice": 30,
+      "debtAmount": null,
+      "debtDate": null,
+      "providerIds": [],
+      "providerPrices": {},
+      "date": "5/6/2026"
+    },
+    {
+      "id": "mq0nditniy3",
+      "name": "EAPATULAS METAL #3 PRETUL COD 21516",
+      "qty": 3,
+      "price": 0,
+      "sellPrice": 115,
+      "debtAmount": null,
+      "debtDate": null,
+      "providerIds": [],
+      "providerPrices": {},
+      "date": "5/6/2026"
+    },
+    {
+      "id": "mq0ninbajuz",
+      "name": "REGLETAS VOLTECK 6 CONTACTOS CODE 47182",
+      "qty": 1,
+      "price": 262,
+      "sellPrice": 385,
+      "debtAmount": null,
+      "debtDate": null,
+      "providerIds": [
+        "mpq5368m936"
+      ],
+      "providerPrices": {
+        "mpq5368m936": 262
+      },
+      "date": "5/6/2026"
+    },
+    {
+      "id": "mq0ntdgyu9r",
+      "name": "REGLETAS NEGRA  10 CONTACTOS",
+      "qty": 2,
+      "price": 0,
+      "sellPrice": 335,
+      "debtAmount": null,
+      "debtDate": null,
+      "providerIds": [],
+      "providerPrices": {},
+      "date": "5/6/2026"
+    }
+  ],
+  "providers": [
+    {
+      "id": "mpolaxlke7v",
+      "name": "CONSUEGRA",
+      "contact": "RM",
+      "phone": "",
+      "email": ""
+    },
+    {
+      "id": "mpoldu671xc",
+      "name": "XUARES ELECTROMECARCANTIL",
+      "contact": "RN",
+      "phone": "",
+      "email": ""
+    },
+    {
+      "id": "mpq4a7oykjo",
+      "name": "BRH EX CONS.. UN MILAGRO",
+      "contact": "(BRH  ) TRABAJABA EN CONSEGRA",
+      "phone": "8094671620",
+      "email": ""
+    },
+    {
+      "id": "mpq5368m936",
+      "name": "TRUPER YOEL",
+      "contact": "( TR )",
+      "phone": "8099723933",
+      "email": ""
+    },
+    {
+      "id": "mpq55d5z6b5",
+      "name": "PEGATANQUE PURO",
+      "contact": "( PURO )",
+      "phone": "8294217618",
+      "email": ""
+    },
+    {
+      "id": "mpq57hh2sg7",
+      "name": "FERROMOVIL",
+      "contact": "(FRM  )  JOSE ORTIZ",
+      "phone": "8095160100",
+      "email": ""
+    },
+    {
+      "id": "mptc2mlv6tr",
+      "name": "FIDER IMPORTADORES Y MAYORISTAS",
+      "contact": "(FIM)  SANTO DOMINGO",
+      "phone": "8298655499",
+      "email": ""
+    },
+    {
+      "id": "mptn3s37ftp",
+      "name": "JULIO AV. VALERIO",
+      "contact": "YULI",
+      "phone": "8099166136",
+      "email": ""
+    }
+  ],
+  "movements": [
+    {
+      "id": "mpoln34w9y0",
+      "type": "entrada",
+      "product": "REGULADORES GRANDE",
+      "qty": 12,
+      "responsible": "Admin",
+      "date": "27/5/2026",
+      "time": "11:51 p. m.",
+      "desc": "Registro inicial"
+    },
+    {
+      "id": "mpolqc9kkg3",
+      "type": "salida",
+      "product": "REGULADORES GRANDE",
+      "qty": 1,
+      "responsible": "CHIQUY",
+      "date": "27/5/2026",
+      "time": "11:54 p. m.",
+      "amount": 260,
+      "desc": "Despacho registrado"
+    },
+    {
+      "id": "mpoogdefitu",
+      "type": "entrada",
+      "product": "TUVO PVC DE 2 DRENAJE YARY 831",
+      "qty": 6,
+      "responsible": "Admin",
+      "date": "28/5/2026",
+      "time": "01:10 a. m.",
+      "desc": "Registro inicial"
+    },
+    {
+      "id": "mpoopajkr57",
+      "type": "entrada",
+      "product": "TUVOS DE MED SCH40 PRRESION",
+      "qty": 25,
+      "responsible": "Admin",
+      "date": "28/5/2026",
+      "time": "01:17 a. m.",
+      "desc": "Registro inicial"
+    },
+    {
+      "id": "mpoouz7nhig",
+      "type": "entrada",
+      "product": "CLAVO CORRIENTE DE 3",
+      "qty": 40,
+      "responsible": "Admin",
+      "date": "28/5/2026",
+      "time": "01:21 a. m.",
+      "desc": "Registro inicial"
+    },
+    {
+      "id": "mpq2km7twrf",
+      "type": "entrada",
+      "product": "TUBOS PVC DE 3",
+      "qty": 6,
+      "responsible": "Admin",
+      "date": "28/5/2026",
+      "time": "04:33 p. m.",
+      "desc": "Registro inicial"
+    },
+    {
+      "id": "mpq2x9pjxpv",
+      "type": "entrada",
+      "product": "BASE TV 32A55 DS MOVIBLE X 400",
+      "qty": 1,
+      "responsible": "Admin",
+      "date": "28/5/2026",
+      "time": "04:43 p. m.",
+      "desc": "Registro inicial"
+    },
+    {
+      "id": "mpq335jccm3",
+      "type": "entrada",
+      "product": "BASE TV 14A42 DS27 MOVIBLE",
+      "qty": 3,
+      "responsible": "Admin",
+      "date": "28/5/2026",
+      "time": "04:47 p. m.",
+      "desc": "Registro inicial"
+    },
+    {
+      "id": "mpq34k2g9gs",
+      "type": "salida",
+      "product": "BASE TV 14A42 DS27 MOVIBLE",
+      "qty": 1,
+      "responsible": "CH",
+      "date": "28/5/2026",
+      "time": "04:49 p. m.",
+      "amount": 690,
+      "desc": "Despacho registrado"
+    },
+    {
+      "id": "mpq39s588ad",
+      "type": "entrada",
+      "product": "CUCHILLA LICUADORA BELLMARK ORIGINAL",
+      "qty": 3,
+      "responsible": "Admin",
+      "date": "28/5/2026",
+      "time": "04:53 p. m.",
+      "desc": "Registro inicial"
+    },
+    {
+      "id": "mpq3bvqygk7",
+      "type": "entrada",
+      "product": "COLA AMARILLA UNIVERSAL",
+      "qty": 12,
+      "responsible": "Admin",
+      "date": "28/5/2026",
+      "time": "04:54 p. m.",
+      "desc": "Registro inicial"
+    },
+    {
+      "id": "mpq3h1wsboh",
+      "type": "entrada",
+      "product": "MOTA ANTIGOTA ZETA DE 1/2 X 9",
+      "qty": 24,
+      "responsible": "Admin",
+      "date": "28/5/2026",
+      "time": "04:58 p. m.",
+      "desc": "Registro inicial"
+    },
+    {
+      "id": "mpq3mtn7vi0",
+      "type": "entrada",
+      "product": "CEMENTO PVC AZUL  LANCO 1 ONZA",
+      "qty": 30,
+      "responsible": "Admin",
+      "date": "28/5/2026",
+      "time": "05:03 p. m.",
+      "desc": "Registro inicial"
+    },
+    {
+      "id": "mpq3pmz4pid",
+      "type": "entrada",
+      "product": "TAPE 3M PEQUEN",
+      "qty": 10,
+      "responsible": "Admin",
+      "date": "28/5/2026",
+      "time": "05:05 p. m.",
+      "desc": "Registro inicial"
+    },
+    {
+      "id": "mpq4ako7fq6",
+      "type": "entrada",
+      "product": "PORTA CANDADO #",
+      "qty": 12,
+      "responsible": "Admin",
+      "date": "28/5/2026",
+      "time": "05:21 p. m.",
+      "desc": "Registro inicial"
+    },
+    {
+      "id": "mpq4gy6oqdv",
+      "type": "entrada",
+      "product": "TAPA BLANCA TOMACORRIENTE",
+      "qty": 30,
+      "responsible": "Admin",
+      "date": "28/5/2026",
+      "time": "05:26 p. m.",
+      "desc": "Registro inicial"
+    },
+    {
+      "id": "mpq4jqkgxmj",
+      "type": "entrada",
+      "product": "TOMA CORRIENTE",
+      "qty": 12,
+      "responsible": "Admin",
+      "date": "28/5/2026",
+      "time": "05:28 p. m.",
+      "desc": "Registro inicial"
+    },
+    {
+      "id": "mpq4rvzu8kw",
+      "type": "entrada",
+      "product": "CERRADURA DE PUNO BENO",
+      "qty": 4,
+      "responsible": "Admin",
+      "date": "28/5/2026",
+      "time": "05:35 p. m.",
+      "desc": "Registro inicial"
+    },
+    {
+      "id": "mpq4vl4swag",
+      "type": "entrada",
+      "product": "CERRADURA DE PUNO BENO SIN LLAVES",
+      "qty": 2,
+      "responsible": "Admin",
+      "date": "28/5/2026",
+      "time": "05:38 p. m.",
+      "desc": "Registro inicial"
+    },
+    {
+      "id": "mpq4y0dopbq",
+      "type": "entrada",
+      "product": "BASURA",
+      "qty": 0,
+      "responsible": "Admin",
+      "date": "28/5/2026",
+      "time": "05:39 p. m.",
+      "desc": "Registro inicial"
+    },
+    {
+      "id": "mproqxdp3go",
+      "type": "salida",
+      "product": "CERRADURA DE PUNO BENO CON LLAVE",
+      "qty": 1,
+      "responsible": "CH",
+      "date": "29/5/2026",
+      "time": "07:42 p. m.",
+      "amount": 385,
+      "desc": "a mao"
+    },
+    {
+      "id": "mproqxe5rqf",
+      "type": "salida",
+      "product": "CEMENTO PVC AZUL  LANCO 1 ONZA",
+      "qty": 1,
+      "responsible": "CH",
+      "date": "29/5/2026",
+      "time": "07:42 p. m.",
+      "amount": 110,
+      "desc": "a mao"
+    },
+    {
+      "id": "mprp0m1n3ub",
+      "type": "entrada",
+      "product": "CUCHILLAS P LICUADORA  OSTER",
+      "qty": 2,
+      "responsible": "Admin",
+      "date": "29/5/2026",
+      "time": "07:49 p. m.",
+      "desc": "Registro inicial"
+    },
+    {
+      "id": "mprp43s1d9h",
+      "type": "salida",
+      "product": "MOTA ANTIGOTA ZETA DE 1/2 X 9",
+      "qty": 1,
+      "responsible": "PVC",
+      "date": "29/5/2026",
+      "time": "07:52 p. m.",
+      "amount": 110,
+      "desc": "a liito"
+    },
+    {
+      "id": "mprpcdleja9",
+      "type": "entrada",
+      "product": "CANALETA RESTANGULAR PARED KOLNY 80 PUL X 1/2",
+      "qty": 6,
+      "responsible": "Admin",
+      "date": "29/5/2026",
+      "time": "07:58 p. m.",
+      "desc": "Registro inicial"
+    },
+    {
+      "id": "mprpi1ktl0d",
+      "type": "entrada",
+      "product": "CARTON PIEDRA HIDROFOGO 1/8 4X8",
+      "qty": 6,
+      "responsible": "Admin",
+      "date": "29/5/2026",
+      "time": "08:03 p. m.",
+      "desc": "Registro inicial"
+    },
+    {
+      "id": "mprpu9xswus",
+      "type": "salida",
+      "product": "CARTON PIEDRA HIDROFOGO 1/8 4X8",
+      "qty": 5,
+      "responsible": "CH",
+      "date": "29/5/2026",
+      "time": "08:12 p. m.",
+      "amount": 700,
+      "desc": "a jose luis"
+    },
+    {
+      "id": "mprvdwvxhu7",
+      "type": "salida",
+      "product": "COLA AMARILLA UNIVERSAL DEPOSITO",
+      "qty": 2,
+      "responsible": "CH",
+      "date": "29/5/2026",
+      "time": "10:47 p. m.",
+      "amount": 135,
+      "desc": "A TITE Y A ALGUIEN MAS"
+    },
+    {
+      "id": "mpssj46qdy4",
+      "type": "salida",
+      "product": "CEMENTO PVC AZUL  LANCO 1 ONZA",
+      "qty": 1,
+      "responsible": "A HIJO DE YERA",
+      "date": "30/5/2026",
+      "time": "02:15 p. m.",
+      "amount": 110,
+      "desc": "Despacho registrado"
+    },
+    {
+      "id": "mpstcgs04sk",
+      "type": "entrada",
+      "product": "TOMA CORRIENTE BTICINO",
+      "qty": 10,
+      "responsible": "Admin",
+      "date": "30/5/2026",
+      "time": "02:38 p. m.",
+      "desc": "Registro inicial"
+    },
+    {
+      "id": "mpstk7kjlod",
+      "type": "entrada",
+      "product": "TOMA CORRIENTE MERCORY",
+      "qty": 13,
+      "responsible": "Admin",
+      "date": "30/5/2026",
+      "time": "02:44 p. m.",
+      "desc": "Registro inicial"
+    },
+    {
+      "id": "mpstq8z76mm",
+      "type": "entrada",
+      "product": "TOMA CORRIENTE 2BLE SOBREPONER VOLTECK CODE 47350",
+      "qty": 11,
+      "responsible": "Admin",
+      "date": "30/5/2026",
+      "time": "02:49 p. m.",
+      "desc": "Registro inicial"
+    },
+    {
+      "id": "mpstv4g8kuf",
+      "type": "entrada",
+      "product": "TOMA CORRIENTE 3PLE SOBREPONER VOLTECK CODE 47351",
+      "qty": 11,
+      "responsible": "Admin",
+      "date": "30/5/2026",
+      "time": "02:53 p. m.",
+      "desc": "Registro inicial"
+    },
+    {
+      "id": "mpsu1qro6ng",
+      "type": "entrada",
+      "product": "TOMA CORRIENTE INLEC CON TAPA",
+      "qty": 12,
+      "responsible": "Admin",
+      "date": "30/5/2026",
+      "time": "02:58 p. m.",
+      "desc": "Registro inicial"
+    },
+    {
+      "id": "mpsx89o3fyi",
+      "type": "salida",
+      "product": "CEMENTO PVC AZUL  LANCO 1 ONZA",
+      "qty": 1,
+      "responsible": "CH",
+      "date": "30/5/2026",
+      "time": "04:27 p. m.",
+      "amount": 110,
+      "desc": "del oyo"
+    },
+    {
+      "id": "mptbn4n02db",
+      "type": "entrada",
+      "product": "INTERRUCTORES CENCILLOS AKSI",
+      "qty": 3,
+      "responsible": "Admin",
+      "date": "30/5/2026",
+      "time": "11:10 p. m.",
+      "desc": "Registro inicial"
+    },
+    {
+      "id": "mptbp52iv6n",
+      "type": "entrada",
+      "product": "INTERRUCTORES CENCILLOS YARY",
+      "qty": 1,
+      "responsible": "Admin",
+      "date": "30/5/2026",
+      "time": "11:12 p. m.",
+      "desc": "Registro inicial"
+    },
+    {
+      "id": "mptcbpkpbwk",
+      "type": "entrada",
+      "product": "INTERRUCTORES CENCILLOS ELEGANTES BLANCOS",
+      "qty": 4,
+      "responsible": "Admin",
+      "date": "30/5/2026",
+      "time": "11:29 p. m.",
+      "desc": "Registro inicial"
+    },
+    {
+      "id": "mptcdzi4cx8",
+      "type": "entrada",
+      "product": "INTERRUCTORES CENCILLOS ELEGANTES GRIS",
+      "qty": 4,
+      "responsible": "Admin",
+      "date": "30/5/2026",
+      "time": "11:31 p. m.",
+      "desc": "Registro inicial"
+    },
+    {
+      "id": "mptfgfg8x5f",
+      "type": "entrada",
+      "product": "INTERRUCTORES CENCILLOS DE OFERTA",
+      "qty": 1,
+      "responsible": "Admin",
+      "date": "31/5/2026",
+      "time": "12:57 a. m.",
+      "desc": "Registro inicial"
+    },
+    {
+      "id": "mptfj7ifond",
+      "type": "entrada",
+      "product": "INTERRUCTOR 2BLE OFERTA",
+      "qty": 2,
+      "responsible": "Admin",
+      "date": "31/5/2026",
+      "time": "12:59 a. m.",
+      "desc": "Registro inicial"
+    },
+    {
+      "id": "mptfl6c4ubx",
+      "type": "entrada",
+      "product": "TOMA CORIENTE OFERTA",
+      "qty": 3,
+      "responsible": "Admin",
+      "date": "31/5/2026",
+      "time": "01:01 a. m.",
+      "desc": "Registro inicial"
+    },
+    {
+      "id": "mptfucx1lwd",
+      "type": "entrada",
+      "product": "TOMA CORRIENTE  GRIS PESADO 2BLE GRIS INLEC",
+      "qty": 11,
+      "responsible": "Admin",
+      "date": "31/5/2026",
+      "time": "01:08 a. m.",
+      "desc": "Registro inicial"
+    },
+    {
+      "id": "mptfx94cq3z",
+      "type": "entrada",
+      "product": "TOMA CORRIENTE  GRIS PESADO 3PLE GRIS INLEC",
+      "qty": 10,
+      "responsible": "Admin",
+      "date": "31/5/2026",
+      "time": "01:10 a. m.",
+      "desc": "Registro inicial"
+    },
+    {
+      "id": "mptg85xjm5u",
+      "type": "salida",
+      "product": "TOMA CORRIENTE INLEC BLISTER   SIN LA TAPA",
+      "qty": 1,
+      "responsible": "Admin",
+      "date": "31/5/2026",
+      "time": "01:19 a. m.",
+      "desc": "Ajuste de inventario"
+    },
+    {
+      "id": "mptgdfus83v",
+      "type": "entrada",
+      "product": "TOMA CORRIENTE 3PLE BLANCO INLEC",
+      "qty": 6,
+      "responsible": "Admin",
+      "date": "31/5/2026",
+      "time": "01:23 a. m.",
+      "desc": "Registro inicial"
+    },
+    {
+      "id": "mptgfjyl32w",
+      "type": "entrada",
+      "product": "TOMA CORRIENTE 3PLE BLANCO INLEC",
+      "qty": 4,
+      "responsible": "Admin",
+      "date": "31/5/2026",
+      "time": "01:24 a. m.",
+      "desc": "Ajuste de inventario"
+    },
+    {
+      "id": "mptgiragd07",
+      "type": "entrada",
+      "product": "INTERRUCTOR P TIMBRE YARY",
+      "qty": 6,
+      "responsible": "Admin",
+      "date": "31/5/2026",
+      "time": "01:27 a. m.",
+      "desc": "Registro inicial"
+    },
+    {
+      "id": "mptgt1ztheb",
+      "type": "entrada",
+      "product": "TICTOMA INLEC BLANCO",
+      "qty": 9,
+      "responsible": "Admin",
+      "date": "31/5/2026",
+      "time": "01:35 a. m.",
+      "desc": "Registro inicial"
+    },
+    {
+      "id": "mptgzwgrx6u",
+      "type": "entrada",
+      "product": "TICTOMA  YARY  BLANCO",
+      "qty": 5,
+      "responsible": "Admin",
+      "date": "31/5/2026",
+      "time": "01:40 a. m.",
+      "desc": "Registro inicial"
+    },
+    {
+      "id": "mpth2sb2n3q",
+      "type": "entrada",
+      "product": "TICTOMA GRIS SWICH SOCKET",
+      "qty": 2,
+      "responsible": "Admin",
+      "date": "31/5/2026",
+      "time": "01:42 a. m.",
+      "desc": "Registro inicial"
+    },
+    {
+      "id": "mpthex5h8a9",
+      "type": "entrada",
+      "product": "INTERRUCTOR 2BLE INLEC BLANCO",
+      "qty": 5,
+      "responsible": "Admin",
+      "date": "31/5/2026",
+      "time": "01:52 a. m.",
+      "desc": "Registro inicial"
+    },
+    {
+      "id": "mpthgx0f2ov",
+      "type": "entrada",
+      "product": "INTERRUCTOR 3PLE INLEC BLANCO",
+      "qty": 4,
+      "responsible": "Admin",
+      "date": "31/5/2026",
+      "time": "01:53 a. m.",
+      "desc": "Registro inicial"
+    },
+    {
+      "id": "mpthk08ds8m",
+      "type": "salida",
+      "product": "CARTON PIEDRA HIDROFOGO 1/8 4X8",
+      "qty": 1,
+      "responsible": "CH",
+      "date": "31/5/2026",
+      "time": "01:56 a. m.",
+      "amount": 700,
+      "desc": "a el poli"
+    },
+    {
+      "id": "mpthmsipsfg",
+      "type": "entrada",
+      "product": "INTERRUCTORES CENCILLOS DE OFERTA BOTON MEDIANO",
+      "qty": 4,
+      "responsible": "Admin",
+      "date": "31/5/2026",
+      "time": "01:58 a. m.",
+      "desc": "Registro inicial"
+    },
+    {
+      "id": "mpthojays48",
+      "type": "entrada",
+      "product": "INTERRUCTORES 2BLE DE OFERTA BOTON MEDIANO",
+      "qty": 1,
+      "responsible": "Admin",
+      "date": "31/5/2026",
+      "time": "01:59 a. m.",
+      "desc": "Registro inicial"
+    },
+    {
+      "id": "mpthqr57cz7",
+      "type": "entrada",
+      "product": "INTERRUCTORES CENCILLOS DE OFERTA BOTON MEDIANO",
+      "qty": 1,
+      "responsible": "Admin",
+      "date": "31/5/2026",
+      "time": "02:01 a. m.",
+      "desc": "Ajuste de inventario"
+    },
+    {
+      "id": "mpthshouch9",
+      "type": "entrada",
+      "product": "INTERRUCTORES 3PLE DE OFERTA",
+      "qty": 6,
+      "responsible": "Admin",
+      "date": "31/5/2026",
+      "time": "02:02 a. m.",
+      "desc": "Registro inicial"
+    },
+    {
+      "id": "mpti5qplj8q",
+      "type": "entrada",
+      "product": "TOMA CORRIENTE BLANCO LEVINTO Y  LA TAPA  MEDIO",
+      "qty": 27,
+      "responsible": "Admin",
+      "date": "31/5/2026",
+      "time": "02:13 a. m.",
+      "desc": "Registro inicial"
+    },
+    {
+      "id": "mpti9tho8j0",
+      "type": "entrada",
+      "product": "ACEITE 3 EN 1 TRUPER 16711",
+      "qty": 6,
+      "responsible": "Admin",
+      "date": "31/5/2026",
+      "time": "02:16 a. m.",
+      "desc": "Registro inicial"
+    },
+    {
+      "id": "mpzryuaz5w7",
+      "type": "entrada",
+      "product": "INTERRUCTORES ROOM ELECTRIC",
+      "qty": 7,
+      "responsible": "Admin",
+      "date": "4/6/2026",
+      "time": "11:34 a. m.",
+      "desc": "Registro inicial"
+    },
+    {
+      "id": "mq0myjner5c",
+      "type": "entrada",
+      "product": "MANIJAS HALON PARA PUERTA EVEDOR",
+      "qty": 12,
+      "responsible": "Admin",
+      "date": "5/6/2026",
+      "time": "02:01 a. m.",
+      "desc": "Registro inicial"
+    },
+    {
+      "id": "mq0n5w49y88",
+      "type": "entrada",
+      "product": "MANIJAS HALON ECONOMICO #4",
+      "qty": 7,
+      "responsible": "Admin",
+      "date": "5/6/2026",
+      "time": "02:07 a. m.",
+      "desc": "Registro inicial"
+    },
+    {
+      "id": "mq0ndiu21se",
+      "type": "entrada",
+      "product": "EAPATULAS METAL #3 PRETUL COD 21516",
+      "qty": 3,
+      "responsible": "Admin",
+      "date": "5/6/2026",
+      "time": "02:13 a. m.",
+      "desc": "Registro inicial"
+    },
+    {
+      "id": "mq0ninbaz61",
+      "type": "entrada",
+      "product": "REGLETAS VOLTECK 6 CONTACTOS CODE 47182",
+      "qty": 1,
+      "responsible": "Admin",
+      "date": "5/6/2026",
+      "time": "02:17 a. m.",
+      "desc": "Registro inicial"
+    },
+    {
+      "id": "mq0ntdgyvy1",
+      "type": "entrada",
+      "product": "REGLETAS NEGRA  10 CONTACTOS",
+      "qty": 2,
+      "responsible": "Admin",
+      "date": "5/6/2026",
+      "time": "02:25 a. m.",
+      "desc": "Registro inicial"
+    }
+  ],
+  "dispatches": [
+    {
+      "id": "mpolqc9k0or",
+      "invoiceId": "mpolq7d8qfv",
+      "product": "REGULADORES GRANDE",
+      "code": "REG-7448",
+      "qty": 1,
+      "responsible": "CHIQUY",
+      "date": "27/5/2026",
+      "time": "11:54 p. m.",
+      "amount": 260,
+      "obs": "",
+      "type": "salida"
+    },
+    {
+      "id": "mpq34k2gul7",
+      "invoiceId": "mpq34avk38m",
+      "product": "BASE TV 14A42 DS27 MOVIBLE",
+      "code": "BAS-4841",
+      "qty": 1,
+      "responsible": "CH",
+      "date": "28/5/2026",
+      "time": "04:49 p. m.",
+      "amount": 690,
+      "obs": "",
+      "type": "salida"
+    },
+    {
+      "id": "mproqxdp5sn",
+      "invoiceId": "mproqv3hzgg",
+      "product": "CERRADURA DE PUNO BENO CON LLAVE",
+      "code": "CER-9208",
+      "qty": 1,
+      "responsible": "CH",
+      "date": "29/5/2026",
+      "time": "07:42 p. m.",
+      "amount": 385,
+      "obs": "a mao",
+      "type": "salida"
+    },
+    {
+      "id": "mproqxe5gyv",
+      "invoiceId": "mproqv3hzgg",
+      "product": "CEMENTO PVC AZUL  LANCO 1 ONZA",
+      "code": "CEM-5856",
+      "qty": 1,
+      "responsible": "CH",
+      "date": "29/5/2026",
+      "time": "07:42 p. m.",
+      "amount": 110,
+      "obs": "a mao",
+      "type": "salida"
+    },
+    {
+      "id": "mprp43s1quf",
+      "invoiceId": "mprp3xylba8",
+      "product": "MOTA ANTIGOTA ZETA DE 1/2 X 9",
+      "code": "MOT-5313",
+      "qty": 1,
+      "responsible": "PVC",
+      "date": "29/5/2026",
+      "time": "07:52 p. m.",
+      "amount": 110,
+      "obs": "a liito",
+      "type": "salida"
+    },
+    {
+      "id": "mprpu9xsppd",
+      "invoiceId": "mprpu2zu18d",
+      "product": "CARTON PIEDRA HIDROFOGO 1/8 4X8",
+      "code": "CAR-4098",
+      "qty": 5,
+      "responsible": "CH",
+      "date": "29/5/2026",
+      "time": "08:12 p. m.",
+      "amount": 700,
+      "obs": "a jose luis",
+      "type": "salida"
+    },
+    {
+      "id": "mprvdwvx7ce",
+      "invoiceId": "mprvdu9vqzb",
+      "product": "COLA AMARILLA UNIVERSAL DEPOSITO",
+      "code": "COL-4538",
+      "qty": 2,
+      "responsible": "CH",
+      "date": "29/5/2026",
+      "time": "10:47 p. m.",
+      "amount": 135,
+      "obs": "A TITE Y A ALGUIEN MAS",
+      "type": "salida"
+    },
+    {
+      "id": "mpssj46q8xh",
+      "invoiceId": "mpssj1zem8f",
+      "product": "CEMENTO PVC AZUL  LANCO 1 ONZA",
+      "code": "CEM-5856",
+      "qty": 1,
+      "responsible": "A HIJO DE YERA",
+      "date": "30/5/2026",
+      "time": "02:15 p. m.",
+      "amount": 110,
+      "obs": "",
+      "type": "salida"
+    },
+    {
+      "id": "mpsx89o319a",
+      "invoiceId": "mpsx87jquld",
+      "product": "CEMENTO PVC AZUL  LANCO 1 ONZA",
+      "code": "CEM-5856",
+      "qty": 1,
+      "responsible": "CH",
+      "date": "30/5/2026",
+      "time": "04:27 p. m.",
+      "amount": 110,
+      "obs": "del oyo",
+      "type": "salida"
+    },
+    {
+      "id": "mpthk08dzxo",
+      "invoiceId": "mpthjxppi6c",
+      "product": "CARTON PIEDRA HIDROFOGO 1/8 4X8",
+      "code": "CAR-4098",
+      "qty": 1,
+      "responsible": "CH",
+      "date": "31/5/2026",
+      "time": "01:56 a. m.",
+      "amount": 700,
+      "obs": "a el poli",
+      "type": "salida"
+    }
+  ],
+  "settings": {
+    "lang": "es",
+    "theme": "dark",
+    "password": "6013",
+    "username": "CH",
+    "companyName": "CENTRO FERRETERO CH",
+    "companySlogan": "a usted le falta un tornillo",
+    "pdfColor": "#e18025",
+    "companyLogo": ""
+  }
+}
