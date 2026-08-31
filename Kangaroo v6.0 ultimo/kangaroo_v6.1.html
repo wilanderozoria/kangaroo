@@ -723,7 +723,7 @@ const KangarooCloudSync = (() => {
   async function pull(){
     const {data,error}=await client.from('kangaroo_collections').select('collection,data').eq('workspace_id',workspaceId);
     if(error)throw error;
-    (data||[]).forEach(row=>{ if(collections.includes(row.collection))localStorage.setItem('kng3_'+row.collection,JSON.stringify(row.data)); });
+    (data||[]).forEach(row=>{ if(collections.includes(row.collection))DB.set(row.collection,row.data); });
     applyTheme();applySidebarLogo();
     if(isLoggedIn())navigate(document.querySelector('.nav-item.active')?.dataset?.page||'dashboard');
   }
@@ -1314,14 +1314,14 @@ function rmChip(pid) {
 }
 
 function saveProduct(id) {
-  const name=document.getElementById('p-name').value.trim();
-  const qty=document.getElementById('p-qty').value;
-  const unit=document.getElementById('p-unit').value||'uds';
-  const price=document.getElementById('p-price').value;
-  const sellPrice=document.getElementById('p-sell-price').value;
-  const location=document.getElementById('p-location').value.trim();
-  const debtAmount=document.getElementById('p-debt').value;
-  const debtDate=document.getElementById('p-debt-date').value;
+  const name=document.getElementById('p-name')?.value?.trim();
+  const qty=document.getElementById('p-qty')?.value;
+  const unit=document.getElementById('p-unit')?.value||'uds';
+  const price=document.getElementById('p-price')?.value;
+  const sellPrice=document.getElementById('p-sell-price')?.value;
+  const location=document.getElementById('p-location')?.value?.trim();
+  const debtAmount=document.getElementById('p-debt')?.value;
+  const debtDate=document.getElementById('p-debt-date')?.value;
   const image=document.getElementById('p-image-data').value;
   if(!name){toast('El nombre es requerido','error');return;}
   if(qty===''||isNaN(Number(qty))){toast('Cantidad inválida','error');return;}
@@ -1418,9 +1418,9 @@ function openProvModal(id) {
 }
 
 function saveProv(id) {
-  const name=document.getElementById('pv-name').value.trim();
+  const name=document.getElementById('pv-name')?.value?.trim();
   if(!name){toast('El nombre es requerido','error');return;}
-  const data={name,contact:document.getElementById('pv-contact').value.trim(),phone:document.getElementById('pv-phone').value.trim(),email:document.getElementById('pv-email').value.trim()};
+  const data={name,contact:document.getElementById('pv-contact')?.value?.trim(),phone:document.getElementById('pv-phone')?.value?.trim(),email:document.getElementById('pv-email')?.value?.trim()};
   const provs=DB.providers();
   if(id){const idx=provs.findIndex(x=>x.id===id);provs[idx]={...provs[idx],...data};toast('Proveedor actualizado');}
   else{provs.push({id:uid(),...data});toast('Proveedor registrado');}
@@ -1654,8 +1654,8 @@ function updateCartPrice(i, val) {
 
 /* ── INVOICE PREVIEW ── */
 function previewDispatchInvoice(confirmAndSave=false) {
-  const resp=document.getElementById('d-resp')?.value.trim();
-  const obs=document.getElementById('d-obs')?.value.trim();
+  const resp=document.getElementById('d-resp')?.value?.trim();
+  const obs=document.getElementById('d-obs')?.value?.trim();
   if(!dispatchCart.length){toast('Agrega al menos un producto','error');return;}
   if(!resp){toast('El responsable es requerido','error');return;}
   for(const item of dispatchCart){
@@ -1924,8 +1924,8 @@ function openReturnModal() {
 function saveReturn() {
   const name=document.getElementById('ret-prod').value;
   const qty=Number(document.getElementById('ret-qty').value);
-  const resp=document.getElementById('ret-resp').value.trim();
-  const obs=document.getElementById('ret-obs').value.trim();
+  const resp=document.getElementById('ret-resp')?.value?.trim();
+  const obs=document.getElementById('ret-obs')?.value?.trim();
   if(!name){toast('Selecciona un producto','error');return;}
   if(!qty||qty<=0){toast('Cantidad inválida','error');return;}
   if(!resp){toast('El responsable es requerido','error');return;}
@@ -2454,7 +2454,7 @@ function renderConfiguracion() {
       <div class="setting-group-title">☁ Sincronización en la nube</div>
       <div class="setting-row" style="flex-wrap:wrap;gap:12px">
         <div style="flex:1;min-width:180px"><div class="setting-label">Supabase</div><div class="setting-desc">${cloud.state==='connected'?'Tus cambios se guardan automáticamente en todos los dispositivos.':cloud.state==='available'?'Inicia sesión con el mismo correo en cada dispositivo.':'Configura supabase-config.js siguiendo SUPABASE_SETUP.md.'}</div></div>
-        <div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap"><span class="badge ${cloud.state==='connected'?'badge-in':'badge-neutral'}" style="font-size:10px">${cloud.label.toUpperCase()}</span>${cloud.state==='available'?`<button class="btn btn-amber btn-sm" onclick="openCloudLoginModal()">Conectar</button>`:''}${cloud.state==='connected'?`<button class="btn btn-ghost btn-sm" onclick="disconnectCloud()">Desconectar</button>`:''}</div>
+        <div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap"><span class="badge ${cloud.state==='connected'?'badge-in':'badge-neutral'}" style="font-size:10px">${cloud.label.toUpperCase()}</span>${cloud.state==='available'?`<button class="btn btn-amber btn-sm" onclick="openCloudLoginModal()">Conectar</button>`:''}${cloud.state==='connected'?`<button class="btn btn-ghost btn-sm" onclick="disconnectCloud()">Cambiar Cuenta</button>`:''}</div>
       </div>
     </div>
 
@@ -2490,8 +2490,8 @@ function changePassword() {
 }
 
 function saveUsername() {
-  const newName=document.getElementById('cfg-username').value.trim();
-  const currentPass=document.getElementById('cfg-current-pass').value;
+  const newName=document.getElementById('cfg-username')?.value?.trim();
+  const currentPass=document.getElementById('cfg-current-pass')?.value;
   const s=DB.settings();
   const hasPassword=!!(s.password&&s.password.length>0);
   if(!newName){toast('El nombre no puede estar vacío','error');return;}
@@ -2517,7 +2517,7 @@ function openCloudConflictModal() {
 }
 async function useCloudData(){try{await KangarooCloudSync.useRemote();closeModal();}catch(err){toast(err.message||'No se pudo descargar','error');}}
 async function uploadThisDeviceData(){try{await KangarooCloudSync.uploadLocal();closeModal();}catch(err){toast(err.message||'No se pudo sincronizar','error');}}
-async function disconnectCloud(){await KangarooCloudSync.signOut();toast('Sincronización desconectada en este dispositivo');renderConfiguracion();}
+async function disconnectCloud(){await KangarooCloudSync.signOut();toast('Sesión cerrada. Ahora puedes conectar otra cuenta');renderConfiguracion();openCloudLoginModal();}
 
 /* ── SECURITY QUESTIONS (recovery keywords) MANAGEMENT ── */
 function openSecurityQuestionsModal() {
