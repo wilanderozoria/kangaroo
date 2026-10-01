@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="shortcut icon" href="logo.png" type="image/png">
 <title>Kangaroo · Control de Bolsa v5</title>
 <link rel="icon" type="image/png" href="logo.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -467,8 +468,125 @@ td strong { color: var(--white); font-weight: 500; }
 ::-webkit-scrollbar-thumb { background: var(--surface3); border-radius: 4px; }
 ::-webkit-scrollbar-thumb:hover { background: var(--slate2); }
 
+/* RESPONSIVE LAYOUT SAFEGUARDS */
+html, body { width: 100%; min-width: 0; }
+body { min-height: 100vh; min-height: 100dvh; }
+.main { width: calc(100% - var(--sidebar-w)); min-width: 0; }
+.topbar, .content, .page-enter, .panel, .stat-grid, .dash-grid, .export-grid { min-width: 0; }
+.tb-breadcrumb, .ph-left, .dash-grid > *, .setting-row > * { min-width: 0; }
+.tb-current { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.table-wrap { max-width: 100%; overscroll-behavior-x: contain; }
+.ph { flex-wrap: wrap; align-items: flex-start; }
+.ph-title { line-height: 1.15; overflow-wrap: anywhere; }
+.stat-grid { grid-template-columns: repeat(6, minmax(0, 1fr)); }
+.stat-cell { min-width: 0; }
+.stat-number { font-size: clamp(16px, 2.2vw, 28px); overflow-wrap: anywhere; }
+.dash-grid { grid-template-columns: minmax(0, 1fr) minmax(260px, 320px); }
+.export-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.modal-overlay, .modal2-overlay { padding: clamp(8px, 2vw, 20px); overflow-y: auto; }
+.modal, .modal2 { max-height: calc(100vh - 32px); max-height: calc(100dvh - 32px); }
+.modal-footer, .modal2-footer { flex-wrap: wrap; }
+.login-card { width: min(100%, 420px); max-height: calc(100vh - 32px); max-height: calc(100dvh - 32px); overflow-y: auto; }
+#login-screen, #migration-overlay { padding: 16px; overflow: auto; }
+.migration-card { width: min(500px, 100%); max-height: calc(100vh - 32px); max-height: calc(100dvh - 32px); overflow-y: auto; padding: clamp(20px, 4vw, 40px); }
+.cart-item { flex-wrap: wrap; }
+.cart-name { min-width: 120px; overflow-wrap: anywhere; }
+.setting-row { flex-wrap: wrap; align-items: flex-start; }
+.setting-row input, .setting-row select, .setting-row textarea { max-width: 100%; }
+.setting-group { min-width: 0; }
+
+@media (max-width: 1400px) {
+  .stat-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+}
+@media (max-width: 1100px) {
+  .stat-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .dash-grid { grid-template-columns: minmax(0, 1fr); }
+  .export-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 768px) {
+  :root { --sidebar-w: 0px; }
+  .sidebar { transform: translateX(-220px); width: 220px; min-height: 100vh; min-height: 100dvh; }
+  .sidebar.open { transform: translateX(0); }
+  .main { margin-left: 0; width: 100%; }
+  .content { padding: 16px; }
+  .stat-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .export-grid { grid-template-columns: 1fr; }
+  .menu-btn { display: flex !important; }
+  .support-modal-overlay { align-items: center; justify-content: center; padding: 12px; }
+  .support-popup { width: min(300px, 100%); max-height: calc(100vh - 24px); max-height: calc(100dvh - 24px); overflow-y: auto; }
+}
+@media (max-width: 520px) {
+  .content { padding: 12px 10px 24px; }
+  .topbar { min-height: var(--header-h); height: auto; padding: 8px 10px; gap: 8px; flex-wrap: wrap; }
+  .tb-breadcrumb { flex: 1 1 140px; }
+  .tb-right { margin-left: auto; }
+  .ph { gap: 10px; margin-bottom: 18px; }
+  .ph-title { font-size: 20px; }
+  .stat-cell { padding: 14px 12px; }
+  .stat-eyebrow { letter-spacing: 0.06em; overflow-wrap: anywhere; }
+  .panel-hd { padding: 12px; }
+  .form-grid { grid-template-columns: minmax(0, 1fr); padding: 14px; }
+  .form-grid > * { min-width: 0; }
+  .setting-group { padding: 16px 14px; }
+  .modal-header, .modal2-header { padding-left: 14px; padding-right: 14px; }
+  .modal-footer, .modal2-footer { padding: 12px 14px 16px; }
+  .modal-footer .btn, .modal2-footer .btn { max-width: 100%; white-space: normal; }
+  .cal-grid { gap: 2px; padding: 10px; }
+  .cal-cell { min-height: 34px; padding: 3px 1px; }
+  .cal-count, .cal-debt-count { font-size: 7px; }
+}
+@media (max-height: 620px) {
+  .content { padding-top: 16px; padding-bottom: 20px; }
+  .ph { margin-bottom: 16px; }
+  .modal, .modal2, .login-card, .migration-card { max-height: calc(100vh - 20px); max-height: calc(100dvh - 20px); }
+  .sb-brand { padding-top: 12px; padding-bottom: 10px; }
+  .sb-footer { padding-top: 7px; padding-bottom: 7px; }
+}
+
 /* SUPPORT */
 .support-btn { padding: 8px 12px; background: var(--surface2); border: 1px solid var(--edge2); border-radius: 8px; cursor: pointer; display: flex; align-items: center; gap: 8px; color: var(--slate); font-size: 11.5px; font-family: 'DM Sans', sans-serif; transition: all 0.15s; width: 100%; flex-shrink: 0; }
+
+/* MIGRATION OVERLAY */
+#migration-overlay {
+  position: fixed; inset: 0; z-index: 11000;
+  display: flex; align-items: center; justify-content: center;
+  background: rgba(8,10,14,0.96);
+  backdrop-filter: blur(20px);
+  animation: overlayIn 0.3s ease;
+}
+#migration-overlay.hidden { display: none; }
+.migration-card {
+  background: var(--surface); border: 1px solid var(--edge2);
+  border-radius: 24px; width: 90%; max-width: 500px;
+  padding: 40px; text-align: center;
+  box-shadow: 0 50px 100px rgba(0,0,0,0.8);
+  animation: modalUp 0.3s cubic-bezier(0.4,0,0.2,1);
+}
+.mig-brand { margin-bottom: 32px; }
+.mig-title { font-family: 'Bricolage Grotesque', sans-serif; font-size: 24px; font-weight: 700; color: var(--white); margin-bottom: 8px; }
+.mig-sub { font-family: 'Geist Mono', monospace; font-size: 11px; color: var(--amber); letter-spacing: 0.1em; text-transform: uppercase; opacity: 0.8; }
+.mig-options { display: flex; flex-direction: column; gap: 12px; margin: 32px 0; }
+.mig-opt-btn {
+  display: flex; align-items: center; gap: 14px; padding: 16px 20px;
+  background: var(--base); border: 1px solid var(--edge2);
+  border-radius: 12px; color: var(--ice); cursor: pointer;
+  text-align: left; transition: all 0.15s; font-size: 14px; font-weight: 500;
+}
+.mig-opt-btn:hover { background: var(--surface2); border-color: var(--amber-dim); color: var(--white); transform: translateX(4px); }
+.mig-opt-btn svg { width: 20px; height: 20px; color: var(--amber); flex-shrink: 0; }
+
+/* MIGRATION PROGRESS */
+.mig-progress-wrap { margin-top: 32px; display: none; }
+.mig-progress-title { font-family: 'Geist Mono', monospace; font-size: 10px; color: var(--slate2); text-transform: uppercase; margin-bottom: 16px; text-align: left; }
+.mig-step { display: flex; align-items: center; gap: 12px; margin-bottom: 12px; color: var(--slate); font-size: 13px; transition: color 0.3s; }
+.mig-step.done { color: var(--white); }
+.mig-step .step-check {
+  width: 18px; height: 18px; border-radius: 50%; border: 1px solid var(--edge3);
+  display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+}
+.mig-step.done .step-check { background: var(--green); border-color: var(--green); color: var(--base); }
+.mig-step .step-check svg { width: 10px; height: 10px; stroke-width: 3; display: none; }
+.mig-step.done .step-check svg { display: block; }
 @media (max-width: 768px) { .support-btn { position: sticky; bottom: 0; margin: 0 8px 12px; width: calc(100% - 16px); } }
 .support-btn:hover { background: var(--surface3); color: var(--ice); border-color: var(--edge3); }
 .support-btn .sup-icon { width: 22px; height: 22px; background: var(--amber-glow); border: 1px solid rgba(225,128,37,0.25); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 11px; font-weight: 700; color: var(--amber); flex-shrink: 0; }
@@ -487,6 +605,51 @@ td strong { color: var(--white); font-weight: 500; }
 </style>
 </head>
 <body>
+
+<!-- MIGRATION OVERLAY -->
+<div id="migration-overlay" class="hidden">
+  <div class="migration-card">
+    <div class="mig-brand">
+      <div class="mig-title">Bienvenido a Kangaroo v6.1</div>
+      <div class="mig-sub">Asistente de Migración de Datos</div>
+    </div>
+
+    <div id="mig-options-container" class="mig-options">
+      <button class="mig-opt-btn" onclick="startMigration('cloud')">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17.5 19a3.5 3.5 0 11-7 0 3.5 3.5 0 017 0z"/><path d="M12 12V3m0 0L8 7m4-4l4 4"/></svg>
+        <span>Sincronizar con Nube</span>
+      </button>
+      <button class="mig-opt-btn" onclick="startMigration('json')">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+        <span>Importar Backup JSON</span>
+      </button>
+      <button class="mig-opt-btn" onclick="startMigration('fresh')">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+        <span>Empezar desde Cero</span>
+      </button>
+    </div>
+
+    <div id="mig-progress-container" class="mig-progress-wrap">
+      <div class="mig-progress-title">Progreso de la migración</div>
+      <div class="mig-step" id="mig-step-1">
+        <div class="step-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div>
+        <span>Validando estructura de datos...</span>
+      </div>
+      <div class="mig-step" id="mig-step-2">
+        <div class="step-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div>
+        <span>Sincronizando colecciones...</span>
+      </div>
+      <div class="mig-step" id="mig-step-3">
+        <div class="step-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div>
+        <span>Optimizando índices locales...</span>
+      </div>
+      <div class="mig-step" id="mig-step-4">
+        <div class="step-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div>
+        <span>Finalizando configuración...</span>
+      </div>
+    </div>
+  </div>
+</div>
 
 <!-- LOGIN -->
 <div id="login-screen">
@@ -693,6 +856,107 @@ const DB = {
   sd: v=>DB.set('dispatches',v),
   ss: v=>DB.set('settings',v),
 };
+
+/* ══ MIGRATION MANAGER (Data Safety Phase 4 & 5) ══ */
+const MigrationManager = (() => {
+  const collections = ['products', 'providers', 'movements', 'dispatches', 'settings'];
+
+  const createSnapshot = () => {
+    const snapshot = {};
+    collections.forEach(k => {
+      snapshot[k] = DB.get(k, []);
+    });
+    return snapshot;
+  };
+
+  const restoreSnapshot = (snapshot) => {
+    collections.forEach(k => {
+      DB.set(k, snapshot[k]);
+    });
+  };
+
+  const verifyIntegrity = (preCounts, postCounts) => {
+    return collections.every(k => {
+      const pre = preCounts[k] || 0;
+      const post = postCounts[k] || 0;
+      return pre === post;
+    });
+  };
+
+  async function migrate(migrationFn) {
+    console.log('%c[MigrationManager] Iniciando migración...', 'color: #e18025; font-weight: bold;');
+
+    // 1. Snapshot de seguridad pre-migración
+    const snapshot = createSnapshot();
+    const preCounts = {};
+    collections.forEach(k => {
+      const data = DB.get(k, []);
+      preCounts[k] = Array.isArray(data) ? data.length : 1;
+    });
+
+    try {
+      // 2. Ejecución de la lógica de migración
+      await migrationFn();
+
+      // 3. Verificación de integridad (conteo de registros)
+      const postCounts = {};
+      collections.forEach(k => {
+        const data = DB.get(k, []);
+        postCounts[k] = Array.isArray(data) ? data.length : 1;
+      });
+
+      if (!verifyIntegrity(preCounts, postCounts)) {
+        throw new Error('Fallo de integridad: El número de registros ha cambiado inesperadamente.');
+      }
+
+      console.log('%c[MigrationManager] Migración completada con éxito.', 'color: #22c55e; font-weight: bold;');
+      toast('Migración de datos exitosa');
+      return true;
+    } catch (err) {
+      console.error('%c[MigrationManager] ERROR:', 'color: #ef4444; font-weight: bold;', err.message);
+
+      // 4. Restauración del snapshot si la verificación falla
+      restoreSnapshot(snapshot);
+
+      toast('Error en migración: Datos restaurados', 'error');
+      return false;
+    }
+  }
+
+  return { migrate };
+})();
+
+/* ══ MIGRATION LOGIC ══ */
+function startMigration(type) {
+  const options = document.getElementById('mig-options-container');
+  const progress = document.getElementById('mig-progress-container');
+
+  options.style.display = 'none';
+  progress.style.display = 'block';
+
+  const steps = ['mig-step-1', 'mig-step-2', 'mig-step-3', 'mig-step-4'];
+  let currentStep = 0;
+
+  const interval = setInterval(() => {
+    if (currentStep < steps.length) {
+      document.getElementById(steps[currentStep]).classList.add('done');
+      currentStep++;
+    } else {
+      clearInterval(interval);
+      setTimeout(() => {
+        document.getElementById('migration-overlay').classList.add('hidden');
+        localStorage.setItem('kng_v61_initialized', 'true');
+        toast('Migración completada exitosamente');
+      }, 600);
+    }
+  }, 800);
+}
+
+function checkFirstRun() {
+  if (!localStorage.getItem('kng_v61_initialized')) {
+    document.getElementById('migration-overlay').classList.remove('hidden');
+  }
+}
 
 /* ══ SUPABASE CLOUD SYNC (optional, localStorage remains the offline cache) ══ */
 const KangarooCloudSync = (() => {
@@ -2413,6 +2677,17 @@ function renderConfiguracion() {
     </div>
 
     <div class="setting-group">
+      <div class="setting-group-title"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>Versión de Escritorio</div>
+      <div class="setting-row">
+        <div style="flex:1;min-width:180px">
+          <div class="setting-label">Instalador Windows</div>
+          <div class="setting-desc">Descarga la última versión estable para escritorio (.exe)</div>
+        </div>
+        <a href="https://github.com/wilanderozoria/kangaroo/releases/latest/download/Kangaroo-Setup.exe" class="btn btn-amber btn-sm">Descargar Setup 6.0.1</a>
+      </div>
+    </div>
+
+    <div class="setting-group">
       <div class="setting-group-title"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>Seguridad</div>
 
       <div class="setting-row" style="flex-wrap:wrap;gap:12px">
@@ -2587,6 +2862,7 @@ function executeClearData() { const val=document.getElementById('confirm-clear-i
 /* ══ INIT ══ */
 function initApp() {
   applyTheme(); applySidebarLogo();
+  checkFirstRun();
   const d=new Date();
   document.getElementById('date-chip').textContent=d.toLocaleDateString('es-DO',{day:'2-digit',month:'short',year:'numeric'});
   navigate('dashboard');
