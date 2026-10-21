@@ -1783,7 +1783,7 @@ function renderDespacho() {
           <td class="td-mono">${g.time}</td>
           <td class="td-mono" style="color:var(--amber)">${g.totalAmount?currency(g.totalAmount):'—'}</td>
           <td style="font-size:11px;color:var(--slate)">${g.obs||'—'}</td>
-          <td style="text-align:right">${g.type!=='devolucion'?`<button class="btn btn-ghost btn-sm" onclick="viewSavedInvoice('${g.id}')">Ver PDF</button>`:'—'}</td>
+          <td style="text-align:right">${g.type!=='devolucion'?`<button class="btn btn-ghost btn-sm" onclick="printSavedInvoice('${g.id}')">Imprimir</button> <button class="btn btn-ghost btn-sm" onclick="viewSavedInvoice('${g.id}')">PDF</button>`:'—'}</td>
         </tr>`).join('')}</tbody>
       </table></div>`}
     </div>`;
@@ -1919,6 +1919,162 @@ function updateCartPrice(i, val) {
   }
 }
 
+
+/* ══ FACTURA TÉRMICA (plantilla Centro Ferretero CH) ══
+   Imprime por el menú de impresión del sistema. Ancho de papel: 80 (por defecto) o 58 mm. */
+const TICKET_CFG={
+  paperMm:80,
+  logo:'data:image/png;base64,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',
+  name:'CENTRO FERRETERO CH',
+  lines:['Calle 15, #31 Yagüita de Pastor','Santiago, Rep. Dom.','Teléfono: (809) 972-6555','centroferreoch@hotmail.com'],
+  title:'FACTURA DE VENTA DIRECTA',
+  client:'CONSUMIDOR FINAL',
+  footer:['¡GRACIAS POR SU COMPRA!','Conservar esta factura para cambios.','Los cambios se realizan dentro de los primeros 3 días.','(Ciertas condiciones aplican).']
+};
+const tkEsc=s=>String(s==null?'':s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const tkMoney=n=>'$'+(Number(n)||0).toLocaleString('en-US',{minimumFractionDigits:2,maximumFractionDigits:2});
+function tkCalc(d){
+  const subtotal=(d.items||[]).reduce((a,it)=>a+(Number(it.price)||0)*(Number(it.qty)||0),0);
+  const itbis=Number(d.itbis)||0, discount=Number(d.discount)||0;
+  const total=Math.max(0,subtotal+itbis-discount);
+  const cash=(d.cash===''||d.cash==null)?total:(Number(d.cash)||0);
+  return {subtotal,itbis,discount,total,cash,change:Math.max(0,cash-total)};
+}
+(function(){
+  const printable=TICKET_CFG.paperMm>=80?72:48;
+  const css=`
+.tk{width:${printable}mm;margin:0 auto;padding:3mm 0;background:#fff;color:#000;font-family:'Courier New',Consolas,monospace;font-size:11px;line-height:1.35;font-weight:600;box-sizing:content-box}
+.tk *{box-sizing:border-box;color:#000}
+.tk-c{text-align:center}.tk-b{font-weight:800}
+.tk-logo{width:${Math.round(printable*0.66)}mm;max-width:100%;height:auto;display:block;margin:0 auto 2mm;image-rendering:pixelated}
+.tk-hr{border-top:1px dashed #000;margin:2mm 0}
+.tk-hr2{border-top:3px double #000;margin:2mm 0}
+.tk table{width:100%;border-collapse:collapse;table-layout:fixed;font:inherit}
+.tk table th,.tk table thead tr,.tk table tr{background:none!important;color:#000!important;border:0!important;box-shadow:none!important}
+.tk table th{font:inherit!important;font-weight:800!important;font-size:10px!important;text-align:left;padding:0!important;letter-spacing:0!important;text-transform:none!important}
+.tk table th.r{text-align:right}
+.tk table td{border:0!important;background:none!important}
+.tk td{vertical-align:top;padding:.6mm 0;word-break:break-word;font:inherit}
+.tk .r{text-align:right}
+.tk-row{display:flex;justify-content:space-between;align-items:baseline;gap:2mm}
+.tk-tot{font-weight:800;font-size:12.5px}
+.tk .inv-edit-input{font-family:inherit;font-size:inherit;font-weight:inherit;color:#000;text-align:right}
+.tk .tk-in-l{text-align:left;width:100%}
+.tk .tk-in-n{width:22mm}
+.tk-lbl{white-space:nowrap}
+`;
+  window.TICKET_CSS=css;
+  const st=document.createElement('style');st.id='tk-style';st.textContent=css;document.head.appendChild(st);
+})();
+
+function ticketMarkup(d,editable){
+  const t=tkCalc(d);
+  const rows=(d.items||[]).map(it=>`<tr>
+      <td>${tkEsc(it.qty)}</td>
+      <td>${tkEsc(it.name)}</td>
+      <td class="r">${it.price?tkMoney(it.price):'-'}</td>
+      <td class="r">${it.price?tkMoney(Number(it.price)*Number(it.qty)):'-'}</td></tr>`).join('');
+  const num=(id,val,ph)=>editable
+    ?`<input class="inv-edit-input tk-in-n" id="${id}" type="number" min="0" step="0.01" value="${val}" placeholder="${ph||''}">`
+    :tkMoney(val);
+  return `<div class="tk">
+    <img class="tk-logo" src="${TICKET_CFG.logo}" alt="">
+    <div class="tk-c tk-b">${tkEsc(TICKET_CFG.name)}</div>
+    ${TICKET_CFG.lines.map(l=>`<div class="tk-c">${tkEsc(l)}</div>`).join('')}
+    <div class="tk-hr"></div>
+    <div class="tk-c">${tkEsc(TICKET_CFG.title)}</div>
+    <div>NO. FACTURA: ${tkEsc(String(d.invoiceId||'').toUpperCase().slice(0,12))}</div>
+    <div>FECHA: ${tkEsc(d.date)} ${tkEsc(d.time)}</div>
+    <div class="tk-row"><span class="tk-lbl">CAJERO:</span>${editable
+      ?`<input class="inv-edit-input tk-in-l" id="inv-responsible" value="${tkEsc(d.responsible)}">`
+      :`<span style="flex:1">${tkEsc(d.responsible)}</span>`}</div>
+    <div>CLIENTE: ${tkEsc(TICKET_CFG.client)}</div>
+    ${editable
+      ?`<div class="tk-row"><span class="tk-lbl">OBS:</span><input class="inv-edit-input tk-in-l" id="inv-obs" value="${tkEsc(d.obs)}" placeholder="Sin observaciones"></div>`
+      :(d.obs?`<div>OBS: ${tkEsc(d.obs)}</div>`:'')}
+    <div class="tk-hr2"></div>
+    <table><colgroup><col style="width:12%"><col style="width:33%"><col style="width:26%"><col style="width:29%"></colgroup>
+      <thead><tr><th>CANT</th><th>DESCRIPCIÓN</th><th class="r">PRECIO</th><th class="r">TOTAL</th></tr></thead></table>
+    <div class="tk-hr"></div>
+    <table><colgroup><col style="width:12%"><col style="width:33%"><col style="width:26%"><col style="width:29%"></colgroup><tbody>${rows}</tbody></table>
+    <div class="tk-hr"></div>
+    <div class="tk-row"><span>Subtotal:</span><span id="tk-subtotal">${tkMoney(t.subtotal)}</span></div>
+    <div class="tk-row"><span>ITBIS/IVA (18%):</span>${num('inv-itbis',t.itbis.toFixed(2))}</div>
+    <div class="tk-row"><span>Descuento:</span>${num('inv-discount',t.discount.toFixed(2))}</div>
+    <div class="tk-row tk-tot"><span>TOTAL A PAGAR:</span><span id="tk-total">${tkMoney(t.total)}</span></div>
+    <div class="tk-hr"></div>
+    <div class="tk-c">FORMA DE PAGO</div>
+    <div class="tk-row"><span>Efectivo:</span>${editable
+      ?`<input class="inv-edit-input tk-in-n" id="inv-cash" type="number" min="0" step="0.01" value="${d.cash===''||d.cash==null?'':d.cash}" placeholder="${t.total.toFixed(2)}">`
+      :tkMoney(t.cash)}</div>
+    <div class="tk-row"><span>Cambio:</span><span id="tk-change">${tkMoney(t.change)}</span></div>
+    <div class="tk-hr"></div>
+    ${TICKET_CFG.footer.map(l=>`<div class="tk-c" style="font-size:10px">${tkEsc(l)}</div>`).join('')}
+  </div>`;
+}
+
+/* Actualiza total y cambio mientras se editan ITBIS / descuento / efectivo en la vista previa */
+function tkRefreshPreview(){
+  const el=id=>document.getElementById(id);
+  const sub=(dispatchCart||[]).reduce((a,it)=>a+(Number(it.price)||0)*(Number(it.qty)||0),0);
+  const t=tkCalc({items:dispatchCart,itbis:el('inv-itbis')?.value,discount:el('inv-discount')?.value,cash:el('inv-cash')?.value});
+  if(el('tk-subtotal'))el('tk-subtotal').textContent=tkMoney(sub);
+  if(el('tk-total'))el('tk-total').textContent=tkMoney(t.total);
+  if(el('tk-change'))el('tk-change').textContent=tkMoney(t.change);
+}
+
+/* Lee los datos de la vista previa (modal abierto) */
+function collectTicketData(invoiceId,date,time){
+  const n=now();
+  return {
+    invoiceId,
+    date:date||n.date, time:time||n.time,
+    responsible:(document.getElementById('inv-responsible')?.value||'').trim(),
+    obs:(document.getElementById('inv-obs')?.value||'').trim(),
+    itbis:document.getElementById('inv-itbis')?.value||0,
+    discount:document.getElementById('inv-discount')?.value||0,
+    cash:document.getElementById('inv-cash')?.value??'',
+    items:dispatchCart.map(it=>({name:it.name,qty:it.qty,price:it.price}))
+  };
+}
+
+/* Abre el menú de impresión del sistema con el ticket */
+function printTicket(d){
+  const w=TICKET_CFG.paperMm>=80?80:58;
+  const html=`<!doctype html><html><head><meta charset="utf-8"><title>Factura ${tkEsc(String(d.invoiceId||'').slice(0,8))}</title>
+<style>@page{size:${w}mm auto;margin:0}html,body{margin:0;padding:0;background:#fff}${window.TICKET_CSS}</style></head>
+<body>${ticketMarkup(d,false)}</body></html>`;
+  const old=document.getElementById('tk-print-frame');if(old)old.remove();
+  const f=document.createElement('iframe');
+  f.id='tk-print-frame';
+  f.style.cssText=`position:fixed;left:-10000px;top:0;width:${w}mm;height:1200px;border:0`;
+  document.body.appendChild(f);
+  const win=f.contentWindow;
+  win.document.open();win.document.write(html);win.document.close();
+  let done=false;
+  const go=()=>{
+    if(done)return;done=true;
+    try{win.focus();win.print();}catch(e){toast('No se pudo abrir el menú de impresión','error');}
+    win.onafterprint=()=>setTimeout(()=>f.remove(),500);
+    setTimeout(()=>{if(f.parentNode)f.remove();},180000);
+  };
+  const img=win.document.querySelector('img');
+  if(img&&!img.complete){img.onload=img.onerror=go;setTimeout(go,1500);}else setTimeout(go,150);
+}
+
+/* Reimprimir una factura ya guardada (historial) */
+function printSavedInvoice(invoiceId){
+  let rec=DB.dispatches().filter(d=>d.invoiceId===invoiceId);
+  if(!rec.length)rec=DB.dispatches().filter(d=>d.id===invoiceId);
+  if(!rec.length){toast('Factura no encontrada','error');return;}
+  const d=rec[0], x=d.tk||{};
+  printTicket({
+    invoiceId, date:d.date, time:d.time, responsible:d.responsible, obs:d.obs||'',
+    itbis:x.itbis||0, discount:x.discount||0, cash:x.cash==null?'':x.cash,
+    items:rec.map(it=>({name:it.product,qty:it.qty,price:it.amount}))
+  });
+}
+
 /* ── INVOICE PREVIEW ── */
 function previewDispatchInvoice(confirmAndSave=false) {
   const resp=document.getElementById('d-resp')?.value?.trim();
@@ -1956,92 +2112,31 @@ function previewDispatchInvoice(confirmAndSave=false) {
         <span style="font-size:11px;color:var(--ice2)">Los campos con <span style="border-bottom:1px dashed var(--amber);color:var(--amber)">subrayado ámbar</span> son editables — haz clic para modificarlos antes de guardar.</span>
       </div>
     </div>
-    <div style="background:#fff;color:#111;border-radius:10px;padding:28px 28px 20px;margin:0 20px 16px;box-shadow:0 4px 30px rgba(0,0,0,0.4);position:relative;overflow:hidden" id="invoice-live-preview">
-      <div style="position:absolute;top:0;left:0;bottom:0;width:4px;background:#e18025;border-radius:4px 0 0 4px"></div>
-      <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:20px">
-        <div>
-          <div style="font-family:'Bricolage Grotesque',sans-serif;font-size:16px;font-weight:800;color:#111;letter-spacing:0.06em;text-transform:uppercase">
-            <input class="inv-edit-input" id="inv-company-name" value="${s.companyName||'MI EMPRESA'}" style="font-family:'Bricolage Grotesque',sans-serif;font-size:16px;font-weight:800;color:#111;letter-spacing:0.06em;text-transform:uppercase;width:220px">
-          </div>
-          <div style="font-size:10px;color:#666;margin-top:3px">
-            <input class="inv-edit-input" id="inv-company-slogan" value="${s.companySlogan||''}" placeholder="Lema de empresa" style="font-size:10px;color:#666;width:200px">
-          </div>
-        </div>
-        <div style="text-align:right">
-          <div style="font-family:'Bricolage Grotesque',sans-serif;font-size:18px;font-weight:800;color:#e18025">FACTURA</div>
-          <div style="font-family:'Geist Mono',monospace;font-size:9px;color:#888;margin-top:2px"># ${invoiceId.toUpperCase().slice(0,12)}</div>
-        </div>
-      </div>
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:18px;padding:12px;background:#f8f9fc;border-radius:6px">
-        <div>
-          <div style="font-family:'Geist Mono',monospace;font-size:8px;color:#888;text-transform:uppercase;letter-spacing:0.1em">Responsable</div>
-          <input class="inv-edit-input" id="inv-responsible" value="${capturedResp}" style="font-size:11px;color:#222;font-weight:600;width:100%">
-        </div>
-        <div>
-          <div style="font-family:'Geist Mono',monospace;font-size:8px;color:#888;text-transform:uppercase;letter-spacing:0.1em">Fecha</div>
-          <div style="font-size:11px;color:#222;font-weight:600">${date} · ${time}</div>
-        </div>
-        <div>
-          <div style="font-family:'Geist Mono',monospace;font-size:8px;color:#888;text-transform:uppercase;letter-spacing:0.1em">Observación</div>
-          <input class="inv-edit-input" id="inv-obs" value="${capturedObs}" placeholder="Sin observaciones" style="font-size:11px;color:#222;width:100%">
-        </div>
-        <div>
-          <div style="font-family:'Geist Mono',monospace;font-size:8px;color:#888;text-transform:uppercase;letter-spacing:0.1em">Total artículos</div>
-          <div style="font-size:11px;color:#222;font-weight:600">${dispatchCart.length} producto${dispatchCart.length>1?'s':''}</div>
-        </div>
-      </div>
-      <table style="width:100%;border-collapse:collapse;margin-bottom:14px">
-        <thead><tr style="background:#111">
-          <th style="padding:7px 10px;text-align:left;font-family:'Geist Mono',monospace;font-size:8px;font-weight:700;color:#fff;text-transform:uppercase;letter-spacing:0.08em">Producto</th>
-          <th style="padding:7px 10px;font-family:'Geist Mono',monospace;font-size:8px;font-weight:700;color:#fff;text-transform:uppercase;letter-spacing:0.08em;text-align:center">Cant.</th>
-          <th style="padding:7px 10px;font-family:'Geist Mono',monospace;font-size:8px;font-weight:700;color:#fff;text-transform:uppercase;letter-spacing:0.08em;text-align:center">Precio U.</th>
-          <th style="padding:7px 10px;font-family:'Geist Mono',monospace;font-size:8px;font-weight:700;color:#fff;text-transform:uppercase;letter-spacing:0.08em;text-align:right">Total</th>
-        </tr></thead>
-        <tbody>${itemsRows}</tbody>
-      </table>
-      <div style="display:flex;flex-direction:column;align-items:flex-end;gap:4px;margin-bottom:14px">
-        <div style="display:flex;gap:20px;align-items:center">
-          <span style="font-family:'Geist Mono',monospace;font-size:9px;color:#888;text-transform:uppercase">Subtotal</span>
-          <span style="font-size:11px;color:#444">${subtotal>0?`RD$ ${subtotal.toFixed(2)}`:'—'}</span>
-        </div>
-        <div style="display:flex;gap:20px;align-items:center">
-          <span style="font-family:'Geist Mono',monospace;font-size:9px;color:#888;text-transform:uppercase">ITBIS</span>
-          <span style="font-size:11px;color:#444">
-            <input class="inv-edit-input" id="inv-itbis" value="0.00" style="font-size:11px;color:#444;width:80px;text-align:right" type="number" min="0" step="0.01">
-          </span>
-        </div>
-        <div style="display:flex;gap:20px;align-items:center;border-top:2px solid #111;padding-top:6px;margin-top:2px">
-          <span style="font-family:'Bricolage Grotesque',sans-serif;font-size:13px;font-weight:800;color:#111">TOTAL</span>
-          <span style="font-family:'Bricolage Grotesque',sans-serif;font-size:15px;font-weight:800;color:#e18025" id="inv-grand-total">RD$ ${subtotal.toFixed(2)}</span>
-        </div>
-      </div>
-      <div style="font-size:9px;color:#aaa;text-align:center;font-family:'Geist Mono',monospace;border-top:1px solid #eee;padding-top:10px">
-        <input class="inv-edit-input" id="inv-footer-msg" value="Gracias por su preferencia · Kangaroo Control de Bolsa" style="font-size:9px;color:#aaa;text-align:center;width:100%">
-      </div>
+    <div style="background:#fff;border-radius:10px;margin:0 20px 16px;box-shadow:0 4px 30px rgba(0,0,0,0.4);overflow:auto;padding:0 8px" id="invoice-live-preview">
+      ${ticketMarkup({invoiceId,date,time,responsible:capturedResp,obs:capturedObs,itbis:0,discount:0,cash:'',items:dispatchCart.map(it=>({name:it.name,qty:it.qty,price:it.price}))},true)}
     </div>`;
 
   openModal('Vista Previa de Factura', bodyHtml,
     `<button class="btn btn-ghost" onclick="closeModal()">Cancelar</button>
-     <button class="btn btn-blue" onclick="downloadInvoicePDFFromPreview('${invoiceId}')">
+     <button class="btn btn-ghost" onclick="downloadInvoicePDFFromPreview('${invoiceId}')">
        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" style="width:12px;height:12px"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-       Solo descargar PDF
+       Descargar PDF
+     </button>
+     <button class="btn btn-blue" onclick="printTicket(collectTicketData('${invoiceId}'))">
+       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:12px;height:12px"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 01-2-2v-5a2 2 0 012-2h16a2 2 0 012 2v5a2 2 0 01-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
+       Solo imprimir
      </button>
      <button class="btn btn-amber" onclick="confirmDispatchFromPreview('${invoiceId}')">
        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="width:12px;height:12px"><polyline points="20 6 9 17 4 12"/></svg>
-       Confirmar y guardar
+       Confirmar e imprimir
      </button>`,
-    '720px'
+    '640px'
   );
 
   setTimeout(()=>{
-    const itbisEl=document.getElementById('inv-itbis');
-    const totalEl=document.getElementById('inv-grand-total');
-    if(itbisEl&&totalEl){
-      itbisEl.addEventListener('input',()=>{
-        const itbis=Number(itbisEl.value)||0;
-        totalEl.textContent=`RD$ ${(subtotal+itbis).toFixed(2)}`;
-      });
-    }
+    ['inv-itbis','inv-discount','inv-cash'].forEach(id=>{
+      document.getElementById(id)?.addEventListener('input',tkRefreshPreview);
+    });
   },60);
 }
 
@@ -2104,6 +2199,7 @@ function confirmDispatchFromPreview(invoiceId) {
   const products=DB.products();
   const dispatches=DB.dispatches();
   const {date,time}=now();
+  const tkData=collectTicketData(invoiceId,date,time);
 
   dispatchCart.forEach(item=>{
     let remaining=item.qty;
@@ -2115,13 +2211,13 @@ function confirmDispatchFromPreview(invoiceId) {
       products[idx].qty=Number(products[idx].qty)-deduct;
       remaining-=deduct;
     });
-    dispatches.push({id:uid(),invoiceId,product:item.name,code:item.code,qty:item.qty,responsible:resp,date,time,amount:item.price||null,obs:obs||'',type:'salida'});
+    dispatches.push({id:uid(),invoiceId,product:item.name,code:item.code,qty:item.qty,responsible:resp,date,time,amount:item.price||null,obs:obs||'',type:'salida',tk:{itbis:Number(tkData.itbis)||0,discount:Number(tkData.discount)||0,cash:tkData.cash===''?null:(Number(tkData.cash)||0)}});
     addMov({type:'salida',product:item.name,qty:item.qty,responsible:resp,date,time,amount:item.price||null,desc:obs||'Despacho registrado'});
   });
 
   DB.sp(products);
   DB.sd(dispatches);
-  downloadInvoicePDFFromPreview(invoiceId);
+  printTicket(tkData);
   toast(`${dispatchCart.length} producto${dispatchCart.length>1?'s':''} despachado${dispatchCart.length>1?'s':''}`);
   dispatchCart=[];
   closeModal();
