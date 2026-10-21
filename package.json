@@ -1,0 +1,12 @@
+{
+  "name": "kangaroo-app",
+  "version": "6.0.1",
+  "description": "Kangaroo desktop app (NW.js)",
+  "main": "index.html",
+  "scripts": {
+    "desktop": "Kangaroo_App_v2/Kangaroo.exe Kangaroo_App_v2"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
